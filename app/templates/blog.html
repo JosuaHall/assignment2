@@ -1,0 +1,16 @@
+{% extends "base.html"%}
+
+{% block content %}
+<h3>Blog</h3>
+<br />
+<ul>
+    {% for data in posts %}
+    <li>
+        <div class="mb-2"><b>{{data.name}}</b></div>
+        <div class="mb-2">{{data.text}}</div>
+        <div><small>{{data.created_date}}</small></div>        
+    </li>
+    </tbody>
+    {% endfor%}
+</ul>
+{% endblock %}
